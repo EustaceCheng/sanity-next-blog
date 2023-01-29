@@ -9,7 +9,7 @@ function Banner() {
         <h2 className=" mt-5 md:mt-0">welcome to ...</h2>
       </div>
       <p className=" mt-5 md:mt-2 text-gray-400 max-w-sm">
-        New product feature | The latest in technology | More!
+        React Developer | youtubeholic | Procrastinator
       </p>
     </div>
   );
