@@ -1,5 +1,8 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["Hsiu", "portabletext"]
+  "cSpell.words": ["datetime", "hotspot", "Hsiu", "portabletext"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
