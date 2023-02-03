@@ -5,6 +5,7 @@ import BlogList from '../../components/BlogList';
 import PreviewBlogList from '../../components/PreviewBlogList';
 import PreviewSuspense from '../../components/PreviewSuspense';
 
+export const revalidate = 30; // revalidate every 30s
 const query = groq`
 *[_type=='post']{
 ...,
