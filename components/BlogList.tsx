@@ -1,13 +1,12 @@
-import Image from "next/image";
-import urlFor from "../lib/urlFor";
-import ClientSideRoute from "./ClientSideRoute";
+import Image from 'next/image';
+import urlFor from '../lib/urlFor';
+import ClientSideRoute from './ClientSideRoute';
 
 type Props = {
   posts: Post[];
 };
 
 function BlogList({ posts }: Props) {
-  console.log(posts);
   return (
     <div>
       <hr className=" border-[#b65c54] mb-10" />
@@ -32,10 +31,10 @@ function BlogList({ posts }: Props) {
                   <div>
                     <p className="font-bold">{post.title}</p>
                     <p>
-                      {new Date(post._createdAt).toLocaleDateString("en-US", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
+                      {new Date(post._createdAt).toLocaleDateString('en-US', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
                       })}
                     </p>
                   </div>

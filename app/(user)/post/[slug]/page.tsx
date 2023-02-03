@@ -10,13 +10,15 @@ type Props = {
 };
 
 async function page({ params: { slug } }: Props) {
-  const query = groq`*[_type=='post'&& slug.current == $slug][0]{
-        ...,
-        author->,
-        categories[]->
-    }`;
+  const query = groq`
+  *[_type=='post'&& slug.current == $slug][0]
+  {
+    ...,
+    author->,
+    categories[]->
+  }`;
   const post: Post = await client.fetch(query, { slug });
-
+  if (!post) return null;
   return (
     <article className="px-10 pb-28">
       <section className="space-y-2 border border-[#F7AB0A] text-white">

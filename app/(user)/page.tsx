@@ -1,7 +1,6 @@
 import { previewData } from 'next/headers';
 import { groq } from 'next-sanity';
 import { client } from '../../lib/sanity.client';
-
 import BlogList from '../../components/BlogList';
 import PreviewBlogList from '../../components/PreviewBlogList';
 import PreviewSuspense from '../../components/PreviewSuspense';
@@ -15,7 +14,6 @@ categories[]->
 
 export default async function HomePage() {
   if (previewData()) {
-    console.log('preview mode');
     return (
       <PreviewSuspense fallback="Loading">
         <PreviewBlogList query={query} />
